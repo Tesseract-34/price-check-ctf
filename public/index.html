@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber Shop</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🛍️ Cyber Shop</h1>
+    <p>Limited items — choose wisely.</p>
+
+    <div class="product">
+      <h3>Premium Security Report</h3>
+      <p class="price">$99</p>
+      <form method="POST" action="/add-to-cart">
+        <input type="hidden" name="item" value="premium_report">
+        <button type="submit" class="btn primary">Add to Cart</button>
+      </form>
+    </div>
+
+    <div class="product locked">
+      <h3>Flag Redemption Token</h3>
+      <p class="price">$1000</p>
+      <form method="POST" action="/add-to-cart">
+        <input type="hidden" name="item" value="flag_token">
+        <button type="submit" class="btn" disabled>Sold Out</button>
+      </form>
+      <p class="note">Too expensive for regular users.</p>
+    </div>
+
+    
+    <div class="cart-actions">
+      <a href="/cart" class="btn secondary">🛒 View Cart</a>
+      <a href="/?reset=1" class="btn reset" onclick="return confirm('Clear cart?')">🔄 Clear Cart</a>
+    </div>
+  </div>
+</body>
+</html>
